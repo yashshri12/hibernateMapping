@@ -28,7 +28,7 @@ public class University {
 	private Long id;
 	private String name;
 	
-	@OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+	@OneToMany(cascade = {CascadeType.PERSIST , CascadeType.MERGE},fetch = FetchType.EAGER)
 	@JoinColumn(name = "university_id")
 	private List<Student> student;
 }

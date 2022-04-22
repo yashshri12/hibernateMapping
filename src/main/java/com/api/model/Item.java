@@ -1,14 +1,10 @@
 package com.api.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -25,7 +21,8 @@ public class Item {
 	private Long id;
 	private String serialNumber;
 	
-	@ManyToOne
-	@JsonBackReference
-	private Cart cart;
+//	@ManyToOne
+//	@JsonIgnore
+//	@JsonBackReference
+//	private Cart cart;
 }
